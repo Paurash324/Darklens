@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "DarkLens",
+  "version": "1.0.0",
+  "description": "See what websites are trying to make you do.",
+  "action": { "default_popup": "popup.html", "default_title": "DarkLens" },
+  "background": { "service_worker": "src/background/index.ts", "type": "module" },
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["src/content/index.ts"], "run_at": "document_idle" }],
+  "side_panel": { "default_path": "sidepanel.html" },
+  "options_page": "options.html",
+  "permissions": ["activeTab", "storage", "sidePanel"],
+  "host_permissions": ["<all_urls>"],
+  "icons": {}
+}
