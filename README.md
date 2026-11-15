@@ -8,10 +8,13 @@ DarkLens is a privacy-conscious Chrome/Chromium Manifest V3 extension built with
 
 ```bash
 npm install
+npm test
 npm run build
 ```
 
 Then open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select the generated `dist/` directory.
+
+Dependencies are pinned in `package.json` for reproducible installs. The build includes branded 16px, 32px, 48px, and 128px extension icons.
 
 ## Features
 
